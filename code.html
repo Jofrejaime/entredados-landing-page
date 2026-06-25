@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-AO"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Entredados — Análise de Dados para Empresas em Angola</title>
+<meta content="A Entredados transforma os dados da sua empresa em dashboards automatizados, análises de mercado e decisões estratégicas. Parceiro de dados para empresas angolanas." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#45fc9c",
+                        "warning": "#F5A623",
+                        "secondary-fixed-dim": "#bac9c9",
+                        "inverse-on-surface": "#2a332b",
+                        "surface-container-high": "#232c25",
+                        "error": "#FF4D4D",
+                        "surface-container-lowest": "#08100a",
+                        "on-primary-fixed-variant": "#00522c",
+                        "on-primary-container": "#005d33",
+                        "secondary": "#bac9c9",
+                        "surface-container": "#19221b",
+                        "inverse-primary": "#006d3d",
+                        "inverse-surface": "#dbe5da",
+                        "on-secondary-container": "#a9b8b7",
+                        "surface-bright": "#323b34",
+                        "white-cool": "#F1F7F7",
+                        "surface-container-low": "#151e17",
+                        "text-secondary": "#8AADA8",
+                        "on-tertiary": "#4c2700",
+                        "on-secondary": "#253333",
+                        "surface-elevated": "#0A1A1A",
+                        "on-tertiary-container": "#794202",
+                        "outline": "#859587",
+                        "on-secondary-fixed-variant": "#3b4949",
+                        "on-background": "#dbe5da",
+                        "surface-dim": "#0d150f",
+                        "primary-fixed-dim": "#13e385",
+                        "outline-variant": "#3b4a3f",
+                        "background": "#0d150f",
+                        "border-subtle": "#1C2E2E",
+                        "on-tertiary-fixed-variant": "#6c3a00",
+                        "tertiary-fixed": "#ffdcc1",
+                        "on-primary": "#00391d",
+                        "surface-container-highest": "#2e3730",
+                        "on-error": "#690005",
+                        "surface": "#0d150f",
+                        "error-container": "#93000a",
+                        "surface-variant": "#2e3730",
+                        "on-surface": "#dbe5da",
+                        "text-tertiary": "#4D6B66",
+                        "tertiary": "#ffd7b7",
+                        "tertiary-container": "#ffb26c",
+                        "secondary-fixed": "#d6e6e5",
+                        "secondary-container": "#3b4949",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#13e385",
+                        "on-surface-variant": "#bacbbb",
+                        "on-primary-fixed": "#00210f",
+                        "primary-container": "#00df82",
+                        "on-secondary-fixed": "#101e1e",
+                        "info": "#3B9EE8",
+                        "tertiary-fixed-dim": "#ffb778",
+                        "primary-fixed": "#5affa2",
+                        "on-tertiary-fixed": "#2e1500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "96px",
+                        "section-desktop": "128px",
+                        "gutter": "24px",
+                        "md": "32px",
+                        "xs": "8px",
+                        "lg": "64px",
+                        "sm": "16px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Poppins"],
+                        "label": ["Poppins"],
+                        "h3": ["Oxanium"],
+                        "h1-mobile": ["Oxanium"],
+                        "h1": ["Oxanium"],
+                        "display": ["Oxanium"],
+                        "body": ["Poppins"],
+                        "h2": ["Oxanium"],
+                        "cta": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "label": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.12em", "fontWeight": "600"}],
+                        "h3": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "h1-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "h1": ["56px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "display": ["72px", {"lineHeight": "1.05", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body": ["16px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "h2": ["40px", {"lineHeight": "1.15", "fontWeight": "600"}],
+                        "cta": ["16px", {"lineHeight": "1", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .focus-ring:focus-within { box-shadow: 0 0 0 3px #00DF8220; border-color: #00df82; }
+        .text-underline-animated {
+            position: relative;
+            display: inline-block;
+        }
+        .text-underline-animated::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 4px;
+            bottom: 0;
+            left: 0;
+            background-color: #00df82;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .text-underline-animated:hover::after, .animate-underline-on-load::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            border-color: rgba(69, 252, 156, 0.5); /* primary slightly transparent */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-x-hidden">
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-gutter max-w-[1200px] mx-auto">
+<a class="flex items-center gap-xs text-primary font-h3 text-h3 hover:opacity-80 transition-opacity" href="#">
+<img alt="Logótipo da Entredados" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcguUQlN40quZhc-8E5Hgc3JhPo_sd7mFwDwp_y5mTX57IMjXh56T5wrnLtSp-u7ZxywnvSa7X4A2BeZRhM7FwiWd7YgNvhlacRF9w60of80bihWWs6UWcgzAvUVl_uxzAxCGjUOibjXWDaFEqB1FP_pjEae4wJxc__egq5KTYwg0nUUIXGT3PXjnnCCwf5hC1OvJGSP5BiBMmV0XQs57pIlDuNUrveva-C3V_BdWFtV4npMTW6O3s5Dk-zoP2fel-JAkPfH20USM"/>
+                Entredados
+            </a>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-on-surface font-body text-body hover:text-primary transition-all duration-200" href="#sobre">Sobre</a>
+<a class="text-on-surface font-body text-body hover:text-primary transition-all duration-200" href="#servicos">Serviços</a>
+<a class="text-on-surface font-body text-body hover:text-primary transition-all duration-200" href="#comofunciona">Como Funciona</a>
+<a class="text-on-surface font-body text-body hover:text-primary transition-all duration-200" href="#contacto">Contacto</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center border border-primary text-primary px-sm py-xs rounded hover:bg-primary/15 transition-all duration-200 font-cta text-cta" href="#contacto">
+                Falar com a Equipa
+            </a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center blur-[4px]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfOu4X5s0DaXNprviuODWM9l2jfrD2YLWF9uBs0mPmIGpwWOeOzKA2FfVb9XezOnaxesremVAtCf14RPF0zDBf8vAgs43Zo3V12fHB-ikYGweDE1xRL_YGi1QPY_KxhWWnri87nqeqtOKmulMPBAOiuN-c3CEpCHXqP9yMVnRjI2bdC9XnsoPOA4CneKvfOLTOhmETELvSAeCgCiFNQHZeWgyCy-Yow_pOtDCyQbDPNsOXmzPJ7kRAFBe6XeHEKvxaFlnpY-A8qTE');"></div>
+<div class="absolute inset-0 bg-[#030F0F]/65"></div>
+<div class="relative z-10 w-full max-w-[1200px] px-gutter mx-auto grid grid-cols-1 lg:grid-cols-2 gap-md items-center">
+<div class="flex flex-col items-start max-w-2xl">
+<span class="font-label text-label text-primary tracking-widest uppercase mb-xs">ANÁLISE DE DADOS · ANGOLA</span>
+<h1 class="font-h1-mobile md:font-h1 text-h1-mobile md:text-h1 text-on-surface mb-sm">
+                        Decisões certas<br/>começam com <span class="text-underline-animated animate-underline-on-load">dados</span> reais.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-md max-w-lg">
+                        A Entredados transforma os dados da sua empresa em dashboards automatizados, análises de mercado e estratégias concretas de crescimento.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-sm w-full sm:w-auto items-center">
+<a class="w-full sm:w-auto bg-primary text-background font-cta text-cta px-md py-sm rounded hover:bg-primary-container hover:scale-[1.01] transition-all duration-200 flex items-center justify-center" href="#contacto">
+                            Solicitar uma Análise Gratuita <span class="material-symbols-outlined ml-xs">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto text-on-surface font-cta text-cta px-md py-sm hover:text-primary transition-colors flex items-center justify-center" href="#comofunciona">
+                            Ver como funciona
+                        </a>
+</div>
+<p class="text-xs text-text-secondary mt-xs">Sem compromisso. Resposta em menos de 24 horas.</p>
+</div>
+<div class="hidden lg:block relative h-[500px] w-full rounded-lg overflow-hidden border border-border-subtle bg-surface-elevated/80 backdrop-blur-sm shadow-[0_0_40px_rgba(0,223,130,0.1)]">
+<!-- Dashboard Mockup Placeholder -->
+<div class="absolute inset-0 p-sm flex flex-col gap-sm">
+<div class="flex justify-between items-center pb-xs border-b border-border-subtle">
+<span class="font-label text-label text-on-surface">Visão Geral</span>
+<div class="flex gap-xs"><div class="w-2 h-2 rounded-full bg-error"></div><div class="w-2 h-2 rounded-full bg-warning"></div><div class="w-2 h-2 rounded-full bg-primary"></div></div>
+</div>
+<div class="flex-1 bg-surface rounded flex items-center justify-center text-on-surface-variant">
+                            Dashboard Visuals
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-sm border-b border-border-subtle bg-surface-elevated">
+<div class="max-w-[1200px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-md text-center">
+<div class="flex flex-col">
+<span class="font-h2 text-h2 text-primary">+50</span>
+<span class="font-label text-label text-on-surface-variant">Empresas Acompanhadas</span>
+</div>
+<div class="flex flex-col">
+<span class="font-h2 text-h2 text-primary">+200</span>
+<span class="font-label text-label text-on-surface-variant">Dashboards Criados</span>
+</div>
+<div class="flex flex-col">
+<span class="font-h2 text-h2 text-primary">3 Anos</span>
+<span class="font-label text-label text-on-surface-variant">No Mercado Angolano</span>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-section-desktop px-gutter max-w-[1200px] mx-auto" id="sobre">
+<div class="text-center mb-xl max-w-3xl mx-auto">
+<span class="font-label text-label text-primary tracking-widest uppercase mb-xs block">O CUSTO DA INCERTEZA</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-sm">A maioria das empresas angolanas toma decisões sem saber o que os seus dados dizem.</h2>
+<p class="font-body text-body text-text-secondary">Sem análise estruturada, os recursos da sua empresa vão para estratégias que não funcionam. O mercado muda, a concorrência avança — e a resposta chega tarde.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
+<div class="bg-surface-elevated border border-border-subtle rounded-lg p-md card-hover transition-all duration-300">
+<span class="material-symbols-outlined text-warning text-h2 mb-sm">psychology_alt</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-xs">Decisões baseadas em intuição</h3>
+<p class="font-body text-body text-on-surface-variant">Sem dados organizados, cada escolha estratégica é uma aposta. O risco aumenta. O crescimento estagna.</p>
+</div>
+<div class="bg-surface-elevated border border-border-subtle rounded-lg p-md card-hover transition-all duration-300">
+<span class="material-symbols-outlined text-warning text-h2 mb-sm">visibility_off</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-xs">Concorrência sem visibilidade</h3>
+<p class="font-body text-body text-on-surface-variant">Não saber o que os seus concorrentes fazem — e como o consumidor responde — é uma desvantagem competitiva que se acumula todos os dias.</p>
+</div>
+<div class="bg-surface-elevated border border-border-subtle rounded-lg p-md card-hover transition-all duration-300">
+<span class="material-symbols-outlined text-warning text-h2 mb-sm">analytics</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-xs">Relatórios que ninguém usa</h3>
+<p class="font-body text-body text-on-surface-variant">Os dados existem, mas estão dispersos e sem contexto. Relatórios manuais consomem tempo e raramente chegam à pessoa certa, na hora certa.</p>
+</div>
+</div>
+<div class="text-center">
+<p class="font-body-lg text-body-lg text-primary">Existe uma forma melhor de operar.</p>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-desktop bg-surface-elevated border-t border-b border-border-subtle" id="servicos">
+<div class="max-w-[1200px] mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div>
+<span class="font-label text-label text-primary tracking-widest uppercase mb-xs block">O QUE FAZEMOS</span>
+<h2 class="font-h2 text-h2 text-on-surface mb-sm">Análise de dados que a sua equipa consegue usar amanhã.</h2>
+<p class="font-body text-body text-text-secondary mb-lg">A Entredados não é só uma consultora. Somos um parceiro de transformação digital — entregamos soluções, formamos a sua equipa e construímos uma cultura de decisão orientada por dados dentro da sua organização.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="border-l-2 border-primary/30 pl-sm hover:border-primary transition-colors">
+<h4 class="font-h3 text-[20px] text-on-surface mb-xs">Análise de Dados</h4>
+<p class="font-body text-[14px] text-on-surface-variant mb-xs">Recolhemos, organizamos e interpretamos dados revelando padrões e tendências.</p>
+<p class="font-label text-label text-primary opacity-80">O que era opaco torna-se claro.</p>
+</div>
+<div class="border-l-2 border-primary/30 pl-sm hover:border-primary transition-colors">
+<h4 class="font-h3 text-[20px] text-on-surface mb-xs">Dashboards Auto.</h4>
+<p class="font-body text-[14px] text-on-surface-variant mb-xs">Painéis de controlo inteligentes e atualizados em tempo real.</p>
+<p class="font-label text-label text-primary opacity-80">Desempenho sempre visível.</p>
+</div>
+<div class="border-l-2 border-primary/30 pl-sm hover:border-primary transition-colors">
+<h4 class="font-h3 text-[20px] text-on-surface mb-xs">Inteligência Comp.</h4>
+<p class="font-body text-[14px] text-on-surface-variant mb-xs">Análise de consumidor e concorrência para decisões informadas.</p>
+<p class="font-label text-label text-primary opacity-80">Menos surpresas. Mais antecipação.</p>
+</div>
+<div class="border-l-2 border-primary/30 pl-sm hover:border-primary transition-colors">
+<h4 class="font-h3 text-[20px] text-on-surface mb-xs">Decisões em Tempo Real</h4>
+<p class="font-body text-[14px] text-on-surface-variant mb-xs">Base factual, rápida e acessível para toda a liderança.</p>
+<p class="font-label text-label text-primary opacity-80">Da dúvida à decisão, em minutos.</p>
+</div>
+</div>
+</div>
+<div class="relative h-full min-h-[400px] rounded-lg overflow-hidden border border-border-subtle">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4j225aErsO2FhT7aZBPwhUy3w9SELPC-tJf18SDmivQUw7vFPKz9IirXjne32bZ382tV29ug1Zs-aoq6R9NDBNUqcP_rO7JY7w3RHTLFMbT8Zjfm1EgYcv4CX1A8uM_5K0k0PhqKqUwhDA3d91SvynarYMHX7GIIR3s42689SoIkpFTnzITtw62XACY1HTEKQQKs9N952BomCnVyOlY8vZaZZqvimuW40Raas-_NZm_bZx_DYXgHIo-Yw6KWOjmiqhhbVRhxdN0g');"></div>
+<div class="absolute inset-0 bg-[#030F0F]/40 hover:bg-[#030F0F]/20 transition-all duration-500"></div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-section-desktop bg-[#00DF82] text-on-primary" id="contacto">
+<div class="max-w-[1200px] mx-auto px-gutter text-center">
+<h2 class="font-h2 text-h2 mb-sm">Os seus dados já têm respostas. Falta interpretá-los.</h2>
+<p class="font-body-lg text-body-lg mb-lg max-w-2xl mx-auto opacity-90">Agende uma conversa com a nossa equipa. Sem compromisso, sem termos técnicos — só foco no seu negócio.</p>
+<div class="max-w-md mx-auto bg-surface-elevated p-md rounded-lg shadow-xl text-left border border-border-subtle">
+<form class="flex flex-col gap-sm">
+<div class="flex flex-col gap-base focus-ring rounded p-[1px] transition-all">
+<label class="font-label text-label text-on-surface">O seu nome</label>
+<input class="bg-background border-border-subtle text-on-surface focus:ring-0 focus:outline-none rounded px-sm py-xs w-full placeholder-text-secondary" placeholder="Ex: João Silva" type="text"/>
+</div>
+<div class="flex flex-col gap-base focus-ring rounded p-[1px] transition-all">
+<label class="font-label text-label text-on-surface">Email profissional</label>
+<input class="bg-background border-border-subtle text-on-surface focus:ring-0 focus:outline-none rounded px-sm py-xs w-full placeholder-text-secondary" placeholder="Ex: joao@empresa.ao" type="email"/>
+</div>
+<div class="flex flex-col gap-base focus-ring rounded p-[1px] transition-all">
+<label class="font-label text-label text-on-surface">Nome da empresa</label>
+<input class="bg-background border-border-subtle text-on-surface focus:ring-0 focus:outline-none rounded px-sm py-xs w-full placeholder-text-secondary" placeholder="Ex: Empresa Lda." type="text"/>
+</div>
+<button class="mt-sm bg-primary text-background font-cta text-cta py-sm rounded hover:bg-primary-container transition-colors w-full flex justify-center items-center" type="submit">
+                            Falar com a Entredados <span class="material-symbols-outlined ml-xs">arrow_forward</span>
+</button>
+<p class="text-[10px] text-text-secondary text-center mt-xs">Os seus dados são confidenciais e nunca partilhados com terceiros.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-lg px-gutter bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md max-w-[1200px] mx-auto mb-lg">
+<div class="flex flex-col gap-sm">
+<a class="text-h3 font-h3 text-primary flex items-center gap-xs" href="#">
+<img alt="Logótipo da Entredados" class="h-6 w-auto opacity-80 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcguUQlN40quZhc-8E5Hgc3JhPo_sd7mFwDwp_y5mTX57IMjXh56T5wrnLtSp-u7ZxywnvSa7X4A2BeZRhM7FwiWd7YgNvhlacRF9w60of80bihWWs6UWcgzAvUVl_uxzAxCGjUOibjXWDaFEqB1FP_pjEae4wJxc__egq5KTYwg0nUUIXGT3PXjnnCCwf5hC1OvJGSP5BiBMmV0XQs57pIlDuNUrveva-C3V_BdWFtV4npMTW6O3s5Dk-zoP2fel-JAkPfH20USM"/>
+                    Entredados
+                </a>
+<p class="font-body text-body text-on-surface-variant max-w-[200px]">O mundo tem a idade dos dados.</p>
+</div>
+<div class="flex flex-col gap-xs">
+<h5 class="font-label text-label text-on-surface uppercase mb-xs">Serviços</h5>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="#">Análise de Dados</a>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="#">Dashboards Automatizados</a>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="#">Inteligência Competitiva</a>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="#">Decisões em Tempo Real</a>
+</div>
+<div class="flex flex-col gap-xs">
+<h5 class="font-label text-label text-on-surface uppercase mb-xs">Empresa</h5>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="#">Sobre Nós</a>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="#">Missão</a>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="#">Equipa</a>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="#">Parceiros</a>
+</div>
+<div class="flex flex-col gap-xs">
+<h5 class="font-label text-label text-on-surface uppercase mb-xs">Contacto</h5>
+<a class="font-body text-body text-on-surface-variant hover:text-primary transition-colors" href="mailto:info@entredados.ao">info@entredados.ao</a>
+<div class="flex gap-sm mt-xs">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera_alt</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">work</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">play_arrow</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto pt-md border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-sm">
+<p class="font-body text-[12px] text-text-secondary">© 2025 Entredados. Todos os direitos reservados. Angola.</p>
+<div class="flex gap-sm">
+<a class="font-body text-[12px] text-text-secondary hover:text-primary transition-colors" href="#">Política de Privacidade</a>
+<a class="font-body text-[12px] text-text-secondary hover:text-primary transition-colors" href="#">Termos de Uso</a>
+</div>
+</div>
+</footer>
+</body></html>
